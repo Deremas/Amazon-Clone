@@ -1,0 +1,19 @@
+.results__container {
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.products__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  max-width: 98%;
+  /* padding: 0 2rem; */
+  margin: 100px 0;
+  gap: 20px;
+  justify-items: center;
+  /* margin: 0 auto; */
+}
+
+.products__container div {
+  margin: 0 auto;
+}
