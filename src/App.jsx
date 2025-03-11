@@ -6,7 +6,7 @@ import { auth } from "./Utility/firebase";
 import { Type } from "./Utility/action.type";
 
 function App() {
-  const [{ user }, dispatch] = useContext(DataContext);
+  const [{ user, basket }, dispatch] = useContext(DataContext);
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -15,6 +15,7 @@ function App() {
         dispatch({
           type: Type.SET_USER,
           user: authUser,
+          basket: [{ ...basket }],
         });
       } else {
         dispatch({
